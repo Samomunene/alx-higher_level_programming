@@ -5,7 +5,7 @@
 class Rectangle:
     """Represent a rectangle."""
 
-    def _init_(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
         Args:
@@ -43,19 +43,20 @@ class Rectangle:
 
     def area(self):
         """Return the area of the Rectangle."""
-        return (self._width * self._height)
+        return (self.__width * self.__height)
+
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self._width * 2) + (self._height * 2))
+        return ((self.__width * 2) + (self.__height * 2))
 
-    def _str_(self):
+    def __str__(self):
         """Return the printable representation of the Rectangle.
 
         Represents the rectangle with the # character.
         """
-        if self._width == 0 or self._height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
@@ -65,33 +66,7 @@ class Rectangle:
                 rect.append("\n")
         return ("".join(rect))
 
-    def _repr_(self):
-        """Return the string representation of the Rectangle."""
-        rect = "Rectangle(" + str(self.__width)
-        rect += ", " + str(self.__height) + ")"
-        return (rect)
-    def perimeter(self):
-        """Return the perimeter of the Rectangle."""
-        if self._width == 0 or self._height == 0:
-            return (0)
-        return ((self._width * 2) + (self._height * 2))
-
-    def _str_(self):
-        """Return the printable representation of the Rectangle.
-
-        Represents the rectangle with the # character.
-        """
-        if self._width == 0 or self._height == 0:
-            return ("")
-
-        rect = []
-        for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
-            if i != self.__height - 1:
-                rect.append("\n")
-        return ("".join(rect))
-
-    def _repr_(self):
+    def __repr__(self):
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
