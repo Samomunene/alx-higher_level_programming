@@ -1,3 +1,4 @@
+
 ===========================
 How to Use 0-add_integer.py
 ===========================
@@ -12,7 +13,7 @@ that value is equivalent to using the ``+`` operator.
 
 ::
 
-    >>> add_integer = _import_('0-add_integer').add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(2, 3)
     5
 
@@ -39,6 +40,7 @@ Note that floats are casted to ints before addition is performed.
 
     >>> add_integer(-2.9, -0.2)
     -2
+
 Floating and non-floating point values can be combined.
 
 ::
@@ -82,6 +84,7 @@ If either argument is a non-integer and non-float, a TypeError is raised:
     >>> add_integer(2.3, None)
     Traceback (most recent call last):
     TypeError: b must be an integer
+
 If both arguments are non-integers and non-floats, a TypeError message is only
 printed for the first argument.
 
@@ -98,7 +101,7 @@ The function will fail if infinity is provided.
     >>> add_integer(float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
-
+     
 
 ::
 

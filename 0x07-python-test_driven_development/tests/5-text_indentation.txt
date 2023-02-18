@@ -1,3 +1,4 @@
+
 ================================
 How to Use 5-text_indentation.py
 ================================
@@ -12,7 +13,7 @@ and ``:``.
 
 ::
 
-    >>> text_indentation = _import_('5-text_indentation').text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
     >>> text_indentation("Hello?")
     Hello?
     <BLANKLINE>
@@ -43,7 +44,7 @@ Similarly, no spaces are printed at the end of each printed line.
     Woah now.
     <BLANKLINE>
     This is messy.
-<BLANKLINE>
+    <BLANKLINE>
 
 New lines are only printed for the characters ``.``, ``?``, and ``:`` -
 text not ending with one of these characters is not ended with a new line.
@@ -75,14 +76,15 @@ New lines within a string are printed as normal.
 
 ::
     >>> text_indentation("A sneaky \n new line.")
-    A sneaky
+    A sneaky 
     new line.
     <BLANKLINE>
 
 A combo example:
 
 ::
->>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing "
+
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing "
     ... "elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas "
     ... "commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, "
     ... "sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri "
@@ -108,7 +110,7 @@ A combo example:
     <BLANKLINE>
     Teneo, inquit, finem illi videri nihil dolere.
     <BLANKLINE>
-    Transfer idem ad modestiam vel temperantiam,
+    Transfer idem ad modestiam vel temperantiam, 
     quae est moderatio cupiditatum rationi oboediens.
     <BLANKLINE>
     Si id dicis, vicimus.
@@ -120,6 +122,7 @@ A combo example:
     Quae animi affectio suum cuique tribuens atque hanc, quam dico.
     <BLANKLINE>
     Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
 Invalid Text
 ============
 
@@ -142,3 +145,4 @@ The paramter ``text`` must be a string. Otherwise, a TypeError is raised.
     >>> text_indentation(None)
     Traceback (most recent call last):
     TypeError: text must be a string
+

@@ -1,3 +1,4 @@
+
 ===========================
 How to Use 3-say_my_name.py
 ===========================
@@ -11,7 +12,7 @@ Usage
 
 ::
 
-    >>> say_my_name = _import_('3-say_my_name').say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
     >>> say_my_name("Brennan", "Baraban")
     My name is Brennan Baraban
 
@@ -20,13 +21,13 @@ Usage
     >>> say_my_name("Cornelius Maxwell", "Jones II")
     My name is Cornelius Maxwell Jones II
 
-The parameter last_name is optional. If no last name is provided,
+The parameter ```last_name``` is optional. If no last name is provided,
 an empty string is printed instead.
 
 ::
 
     >>> say_my_name("Brennan")
-    My name is Brennan
+    My name is Brennan 
 
 Invalid Names
 =============
@@ -43,7 +44,7 @@ a TypeError is raised.
 ::
 
     >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
-Traceback (most recent call last):
+    Traceback (most recent call last):
     TypeError: last_name must be a string
 
 ::

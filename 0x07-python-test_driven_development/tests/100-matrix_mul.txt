@@ -1,3 +1,4 @@
+
 ============================
 How to Use 100-matrix_mul.py
 ============================
@@ -11,7 +12,7 @@ Usage
 
 ::
 
-    >>> matrix_mul = _import_('100-matrix_mul').matrix_mul
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
     >>> m_a = [
     ... [1, 2],
     ... [3, 4],
@@ -33,7 +34,8 @@ Usage
 The function also works with floating-point numbers.
 
 ::
->>> m_a = [
+
+    >>> m_a = [
     ... [1.2, 5.5, 6.2],
     ... [4.66, 12.3, -9.2]
     ... ]
@@ -68,13 +70,14 @@ A minimum of two arguments must be provided. Otherwise, a TypeError is raised.
 
     >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
     Traceback (most recent call last):
-    TypeError: matrix_mul() missing 2 required positional arguments:
+    TypeError: matrix_mul() missing 2 required positional arguments: 
     'm_a' and 'm_b'
 
 ::
->>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
+
+    >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
     Traceback (most recent call last):
-    TypeError: matrix_mul() missing 2 required positional arguments:
+    TypeError: matrix_mul() missing 2 required positional arguments: 
     'm_a' and 'm_b'
 
 ValueErrors
@@ -115,7 +118,8 @@ is raised.
     ValueError: m_b can't be empty
 
 ::
->>> print(matrix_mul([[]], []))
+
+    >>> print(matrix_mul([[]], []))
     Traceback (most recent call last):
     ValueError: m_a can't be empty
 
@@ -149,7 +153,7 @@ not a list, a TypeError is raised.
     Traceback (most recent call last):
     TypeError: m_a must be a list
 
-Not just any list - they must be lists of lists!
+Not just any list - they *must* be lists of lists!
 
 ::
 
@@ -158,7 +162,8 @@ Not just any list - they must be lists of lists!
     TypeError: m_a must be a list of lists
 
 ::
->>> print(matrix_mul([[1, 2]], [3, 4]))
+
+    >>> print(matrix_mul([[1, 2]], [3, 4]))
     Traceback (most recent call last):
     TypeError: m_b must be a list of lists
 
@@ -168,7 +173,7 @@ Not just any list - they must be lists of lists!
     Traceback (most recent call last):
     TypeError: m_a must be a list of lists
 
-And not just any list of lists - they must be lists of lists containing
+And not just any list of lists - they *must* be lists of lists containing
 integers or floats!
 
 ::
@@ -193,7 +198,8 @@ Finally, the length of all rows in matrices ``m_a`` and ``m_b`` should be
 equivalent. Otherwise, a TypeError is raised.
 
 ::
->>> m_a = [
+
+    >>> m_a = [
     ... [1, 2],
     ... [3, 4, 5]
     ... ]
@@ -229,3 +235,4 @@ equivalent. Otherwise, a TypeError is raised.
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
     TypeError: each row of m_a must should be of the same size
+
